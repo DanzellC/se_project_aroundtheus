@@ -2,7 +2,7 @@
 
 ## Photo Gallery of **Jacques Cousteau's** Places Traveled.
 
-### **Description of Project**: I utilized HTML and CSS for this project. I ensured the website compatibility can function across popular screen sizes which was a challenging task but a rewarding experience.
+### **Description of Project**: I utilized HTML and CSS for this project. I ensured the website compatibility can function across multiple screen sizes using media queries which was a challenging task but a rewarding experience.
 
 ### \* [Link to my Github Page](https://danzellc.github.io/se_project_aroundtheus/)
 
