@@ -1,6 +1,7 @@
 .footer {
   box-sizing: border-box;
   padding-top: 67px;
+  padding-bottom: 60px;
 }
 
 .footer__copy {
@@ -14,19 +15,16 @@
 
 @media screen and (max-width: 620px) {
   .footer {
-    box-sizing: border-box;
     display: grid;
+    padding-top: 48px;
+    padding-bottom: 36px;
     grid-gap: 20px 19px;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, 282px);
   }
 
   .footer__copy {
-    font-family: "Inter", Arial, Helvetica, sans-serif;
-    font-weight: 400;
     font-size: 14px;
-    color: #545454;
-    margin: 0;
     line-height: 17px;
   }
 }

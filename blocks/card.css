@@ -11,12 +11,14 @@
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
 }
 
 .card__image {
   width: 282px;
   height: 282px;
+  object-fit: cover;
 }
 
 .card__description {
@@ -29,7 +31,6 @@
   padding-right: 20px;
   align-items: center;
   justify-content: space-between;
-  border-radius: 0 0 10px 10px;
 }
 
 .card__title {
