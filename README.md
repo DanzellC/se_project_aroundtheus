@@ -12,6 +12,6 @@
 
 ### \* [Link to Project Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?type=design&node-id=0-1&mode=design&t=RifMc0rS5YsAwoxO-0)
 
-### \* [Link to my Explainer Video](https://drive.google.com/file/d/1Klm6RztptL-Xpr2NqRWSrMbtzvlLxC-T/view?usp=drive_link)
+### \* [Link to my Explainer Video](https://drive.google.com/file/d/1Klm6RztptL-Xpr2NqRWSrMbtzvlLxC-T/view?usp=sharing)
 
 ### Thanks for viewing my project!
