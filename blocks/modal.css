@@ -1,0 +1,115 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 19px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.modal_opened {
+  display: flex;
+}
+
+.modal__heading {
+  color: black;
+  margin-top: 0;
+  margin-bottom: 54px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.modal__container {
+  position: relative;
+  margin: auto;
+  width: 430px;
+  padding: 36px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.modal__close {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: calc(100% + 5px);
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../images/Close_Icon_Overlay.svg);
+}
+
+.modal__form {
+}
+
+.modal__title {
+  width: 100%;
+  height: 27px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  line-height: 30px;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.modal__description {
+  width: 100%;
+  height: 27px;
+  box-sizing: border-box;
+  margin-bottom: 48px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  line-height: 30px;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.modal__button {
+  width: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 2px;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 50px;
+  background-color: #000;
+  color: #fff;
+}
+
+@media screen and (max-width: 620px) {
+  .modal__container {
+    width: 282px;
+  }
+
+  .modal__close {
+    width: 26px;
+    height: 26px;
+    bottom: calc(100% + 14px);
+    left: calc(100% - 29px);
+  }
+}
