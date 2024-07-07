@@ -51,25 +51,7 @@
 .modal__form {
 }
 
-.modal__title {
-  width: 100%;
-  height: 27px;
-  box-sizing: border-box;
-  margin-bottom: 30px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: black;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  line-height: 30px;
-  font-family: "Inter", Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-}
-
-.modal__description {
+.modal__input {
   width: 100%;
   height: 27px;
   box-sizing: border-box;
