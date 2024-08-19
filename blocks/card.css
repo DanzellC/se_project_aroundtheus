@@ -41,12 +41,37 @@
     no-repeat;
   width: 21px;
   height: 18px;
+  transition: 0.5s ease-in-out;
   border-style: none;
 }
 
 .card__like-button:hover {
   cursor: pointer;
   opacity: 50%;
+}
+
+.card__like-button_active {
+  background-image: url(../images/cardLikeButtonActive.svg);
+  transition: none;
+}
+
+.card__delete {
+  background-image: url(../images/trashCanGroupPics.svg);
+  position: absolute;
+  top: 18px;
+  left: 249px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.card__delete:hover {
+  opacity: 60%;
+  cursor: pointer;
+}
+
+.card .card__like-button:hover {
+  opacity: 50%;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 620px) {

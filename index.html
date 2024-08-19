@@ -26,6 +26,7 @@
             alt="Avatar"
             class="profile__image"
           />
+
           <div class="profile__info">
             <h1 class="profile__title">Jacques Cousteau</h1>
             <button
@@ -46,11 +47,12 @@
       </footer>
     </div>
 
+    <!--Edit Modal -->
     <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
         <button class="modal__close" id="profile-modal-close"></button>
         <h3 class="modal__heading">Edit Profile</h3>
-        <form id="profile-modal__form" class="modal__form">
+        <form class="modal__form">
           <input
             type="text"
             name="title"
@@ -58,6 +60,7 @@
             placeholder="Name"
             class="modal__input"
           />
+
           <input
             type="text"
             name="description"
@@ -65,21 +68,62 @@
             placeholder="Description"
             class="modal__input"
           />
+
           <button class="modal__button">Save</button>
         </form>
       </div>
     </div>
 
+    <!--Add Image Modal-->
+    <div class="modal" id="profile-add-modal">
+      <div class="modal__container">
+        <button class="modal__close" id="profile-modal-close"></button>
+        <h3 class="modal__heading">New Place</h3>
+        <form class="modal__form">
+          <input
+            type="text"
+            name="title"
+            id="card__title-input"
+            placeholder="Title"
+            class="modal__input"
+          />
+
+          <input
+            type="url"
+            name="url"
+            id="card__description-input"
+            placeholder="Image URL"
+            class="modal__input"
+          />
+
+          <button class="modal__button">Create</button>
+        </form>
+      </div>
+    </div>
+
+    <!-----Preview Image----->
+    <div class="modal" id="preview-image-modal">
+      <div class="modal__preview-container">
+        <button class="modal__close" id="modal-close-button"></button>
+        <img src="" alt="" class="modal__preview-image" />
+        <p class="modal__image-caption"></p>
+      </div>
+    </div>
+    <!---------Template Card------------>
     <template id="card-template">
       <li class="card">
         <img src="" alt="" class="card__image" />
+        <img
+          src="./images/trashCanGroupPics.svg"
+          alt="trash-icon"
+          class="card__delete"
+        />
         <div class="card__description">
           <h2 class="card__title"></h2>
-          <button type="button" class="card__like-button"></button>
+          <button class="card__like-button"></button>
         </div>
       </li>
     </template>
-
     <script src="./scripts/index.js"></script>
   </body>
 </html>
