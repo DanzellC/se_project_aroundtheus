@@ -58,8 +58,7 @@
 .card__delete {
   background-image: url(../images/trashCanGroupPics.svg);
   position: absolute;
-  top: 18px;
-  left: 249px;
+  margin: 18px 15px 245px 249px;
   transition: 0.5s ease-in-out;
   cursor: pointer;
 }
