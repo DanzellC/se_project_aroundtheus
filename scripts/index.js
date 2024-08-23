@@ -64,13 +64,13 @@ const cardTemplate =
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
   document.removeEventListener("keyup", closeModalOnEscape);
-  modal.removeEventListener("click", closeModalOnClick);
+  modal.removeEventListener("click", closeModalOnMouseDown);
 }
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
   document.addEventListener("keyup", closeModalOnEscape);
-  modal.addEventListener("click", closeModalOnClick);
+  modal.addEventListener("click", closeModalOnMouseDown);
 }
 
 function closeModalOnEscape(event) {
