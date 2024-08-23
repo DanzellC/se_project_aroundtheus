@@ -87,7 +87,7 @@ function closeModalOnMouseDown(evt) {
     evt.target === evt.currentTarget ||
     evt.target.classList.contains("modal__close")
   ) {
-    closeModal(evt.target);
+    closeModal(evt.currentTarget);
   }
 }
 
@@ -121,7 +121,7 @@ function getCardElement(cardData) {
 
 function renderCard(cardData, cardListEl) {
   const cardElement = getCardElement(cardData);
-  cardListEl.append(cardElement);
+  cardListEl.prepend(cardElement);
 }
 
 function handleProfileEditSubmit(evt) {
@@ -149,18 +149,7 @@ profileEditButton.addEventListener("click", () => {
   openModal(profileEditModal);
 });
 
-profileModalCloseButton.addEventListener("click", () =>
-  closeModal(profileEditModal)
-);
-//------------//
 addNewCardButton.addEventListener("click", () => openModal(profileAddModal));
 
-addCardModalCloseButton.addEventListener("click", () =>
-  closeModal(profileAddModal)
-);
-
-previewCloseModal.addEventListener("click", () =>
-  closeModal(previewImageModal)
-);
 //--------------------------//
 initialCards.forEach((cardData) => renderCard(cardData, cardListEl));
