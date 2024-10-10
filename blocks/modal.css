@@ -148,7 +148,7 @@
 }
 
 .modal__error {
-  max-width: 164px;
+  max-width: 100%;
   display: block;
   max-height: 12px;
   font-weight: 400;
