@@ -42,7 +42,7 @@ const profileTitleInput = document.querySelector("#profile-title-input");
 const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
-const addCardFormElement = profileAddModal.querySelector(".modal__form");
+const addCardFormElement = profileAddModal.querySelector("#add-card-form");
 const cardTitleInput = addCardFormElement.querySelector("#add-card-title");
 const previewImageModal = document.querySelector("#preview-image-modal");
 const previewModalImage = document.querySelector(".modal__preview-image");
@@ -101,7 +101,7 @@ function getCardElement(cardData) {
   });
 
   cardDeleteEl.addEventListener("click", () => {
-    cardElement.remove(cardData);
+    cardElement.remove();
   });
 
   cardImageEl.addEventListener("click", () => {
