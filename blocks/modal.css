@@ -196,8 +196,9 @@
   .modal__close {
     width: 26px;
     height: 26px;
-    bottom: calc(100% + 14px);
-    left: calc(100% - 29px);
+    padding: 0px;
+    left: calc(100% - 35px);
+    bottom: calc(100% + 13px);
   }
 
   .modal__close:hover {
@@ -207,7 +208,7 @@
   .modal__heading {
     font-size: 18px;
     line-height: 22px;
-    margin-bottom: 75px;
+    margin-bottom: 46px;
   }
 
   .modal__input {
