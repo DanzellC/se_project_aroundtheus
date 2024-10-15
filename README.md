@@ -42,7 +42,7 @@
 #### Understood event handling through addEventListener, making the project interactive and dynamic.
 
 
-### \* [Link to my Github Page](https://danzellc.github.io/se_project_aroundtheus/)
+### \* [Link to my Project](https://danzellc.github.io/se_project_aroundtheus/)
 
 ### \* [Link to Project Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?type=design&node-id=0-1&mode=design&t=RifMc0rS5YsAwoxO-0)
 
