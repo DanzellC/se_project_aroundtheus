@@ -39,7 +39,8 @@
 
 .modal__container {
   position: relative;
-  margin: auto;
+
+  box-sizing: border-box;
   width: 430px;
   padding: 36px;
   border-radius: 10px;
@@ -191,6 +192,12 @@
   .modal__container {
     width: 282px;
     padding: 25px 22px;
+    margin: 0;
+  }
+
+  .modal__form-container {
+    display: block;
+    padding: 0;
   }
 
   .modal__close {
@@ -212,11 +219,11 @@
   }
 
   .modal__input {
-    margin-bottom: 30px;
+    margin-top: 30px;
   }
 
   .modal__button {
-    margin-top: 15px;
+    margin-top: 46px;
     font-size: 14px;
   }
 
