@@ -6,7 +6,7 @@ class FormValidator {
     this._inputErrorClass = config.inputErrorClass;
     this._errorClass = config.errorClass;
     this._form = formEl;
-    this._inputEl = this._form.querySelectorAll(this._inputSelector);
+    this._inputEls = [...this._form.querySelectorAll(this._inputSelector)];
     this._submitButton = this._form.querySelector(this._submitButtonSelector);
   }
 
@@ -33,7 +33,9 @@ class FormValidator {
   }
 
   _hasInvalidInput() {
-    return Array.from(this._inputEl).some((inputEl) => !inputEl.validity.valid);
+    return Array.from(this._inputEls).some(
+      (inputEl) => !inputEl.validity.valid
+    );
   }
 
   _toggleButtonState() {
@@ -61,14 +63,14 @@ class FormValidator {
     //
     this._inputEls.forEach((inputEl) => {
       inputEl.addEventListener("input", (e) => {
-        this.checkInputValidity(inputEl); //this._form,, config //
+        this._checkInputValidity(inputEl); //this._form,, config //
         this._toggleButtonState(); // inputEls, submitButton, config //
       });
     });
   }
 
   enableValidation() {
-    this._formEl.addEventListener("submit", (e) => {
+    this._form.addEventListener("submit", (e) => {
       e.preventDefault();
     });
 
@@ -78,16 +80,14 @@ class FormValidator {
 
 export default FormValidator;
 
-// const formValadationConfig = {
-// inputSelector: ".modal__input",
-// submitButtonSelector: ".modal__button",
-// inactiveButtonClass: "modal__button_disabled",
-// inputErrorClass: "modal__input_type_error",
-// errorClass: "modal__error_visible",
-// };
+const formValadationConfig = {
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__button",
+  inactiveButtonClass: "modal__button_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error_visible",
+};
 
-// const editFormValidator = new FormValidator(formValadationConfig);
-// const addFormValidator = new FormValidator(formValadationConfig);
 // const settings = {
 //  formSelector: ".modal__form",
 //  inputSelector: ".modal__input",
