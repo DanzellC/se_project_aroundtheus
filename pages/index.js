@@ -33,9 +33,6 @@ const cardData = {
   link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
 };
 
-const card = new Card(cardData, "#card-template");
-card.getView();
-
 //  ELEMENTS //
 const profileEditButton = document.querySelector("#profile__edit-button");
 const profileEditModal = document.querySelector("#profile-edit-modal");
@@ -109,6 +106,22 @@ const validationSettings = {
 //addCardFormElement
 //);
 //-------FUNCTION-------- //
+// function createCard({ name, link }) {
+//   const cardInstance = new Card(
+//     {
+//       name,
+//       link,
+//     },
+//     "#card-template",
+//     previewImageModal
+//   ).getView();
+//   return cardInstance;
+// }
+// function renderCard(cardData, wrapper) {
+//   const cardElement = createCard(cardData);
+//   wrapper.prepend(cardElement);
+// }
+
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
   document.removeEventListener("keyup", closeModalOnEscape);
@@ -139,32 +152,43 @@ function closeModalOnMouseDown(evt) {
   }
 }
 
+// // Need to remove//
+// function getCardElement(cardData) {
+//   const cardElement = cardTemplate.cloneNode(true);
+//   const cardImageEl = cardElement.querySelector(".card__image");
+//   const cardTitleEl = cardElement.querySelector(".card__title");
+//   const likeButtons = cardElement.querySelector(".card__like-button");
+//   const cardDeleteEl = cardElement.querySelector(".card__delete");
+
+//   likeButtons.addEventListener("click", () => {
+//     likeButtons.classList.toggle("card__like-button_active");
+//   });
+
+//   cardDeleteEl.addEventListener("click", () => {
+//     cardElement.remove();
+//   });
+
+//   cardImageEl.addEventListener("click", () => {
+//     openModal(previewImageModal);
+//     previewModalImage.src = cardData.link;
+//     previewModalImage.alt = cardData.name;
+//     previewCaption.textContent = cardData.name;
+//   });
+
+//   cardImageEl.src = cardData.link;
+//   cardImageEl.alt = cardData.name;
+//   cardTitleEl.textContent = cardData.name;
+//   return cardElement;
+// }
+
 function getCardElement(cardData) {
-  const cardElement = cardTemplate.cloneNode(true);
-  const cardImageEl = cardElement.querySelector(".card__image");
-  const cardTitleEl = cardElement.querySelector(".card__title");
-  const likeButtons = cardElement.querySelector(".card__like-button");
-  const cardDeleteEl = cardElement.querySelector(".card__delete");
+  const card = new Card(cardData, "#card-template");
+  return card.getView();
+}
 
-  likeButtons.addEventListener("click", () => {
-    likeButtons.classList.toggle("card__like-button_active");
-  });
-
-  cardDeleteEl.addEventListener("click", () => {
-    cardElement.remove();
-  });
-
-  cardImageEl.addEventListener("click", () => {
-    openModal(previewImageModal);
-    previewModalImage.src = cardData.link;
-    previewModalImage.alt = cardData.name;
-    previewCaption.textContent = cardData.name;
-  });
-
-  cardImageEl.src = cardData.link;
-  cardImageEl.alt = cardData.name;
-  cardTitleEl.textContent = cardData.name;
-  return cardElement;
+function renderCard(cardData, cardListEl) {
+  const cardElement = getCardElement(cardData);
+  cardListEl.prepend(cardElement);
 }
 
 function handleImageClick(card) {
@@ -172,11 +196,6 @@ function handleImageClick(card) {
   previewModalImage.alt = card.name;
   previewCaption.textContent = card.name;
   openModal(previewImageModal);
-}
-
-function renderCard(cardData, cardListEl) {
-  const cardElement = getCardElement(cardData);
-  cardListEl.prepend(cardElement);
 }
 
 function handleProfileEditSubmit(evt) {
