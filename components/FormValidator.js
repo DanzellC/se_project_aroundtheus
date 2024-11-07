@@ -57,14 +57,12 @@ class FormValidator {
   }
 
   _setEventListeners() {
-    this._inputEls = this._form.querySelectorAll(this._inputSelector);
-    this._submitButton = this._form.querySelector(this._submitButtonSelector);
-    this._toggleButtonState(); //inputEls, submitButton, config //
+    this._toggleButtonState();
     //
     this._inputEls.forEach((inputEl) => {
       inputEl.addEventListener("input", (e) => {
-        this._checkInputValidity(inputEl); //this._form,, config //
-        this._toggleButtonState(); // inputEls, submitButton, config //
+        this._checkInputValidity(inputEl);
+        this._toggleButtonState();
       });
     });
   }
@@ -72,6 +70,12 @@ class FormValidator {
   enableValidation() {
     this._form.addEventListener("submit", (e) => {
       e.preventDefault();
+      this._inputEls.forEach((inputEl) => {
+        inputEl.value = "";
+        this._hideInputError(inputEl);
+      });
+
+      this.disableButton();
     });
 
     this._setEventListeners();
@@ -79,26 +83,3 @@ class FormValidator {
 }
 
 export default FormValidator;
-
-const formValadationConfig = {
-  inputSelector: ".modal__input",
-  submitButtonSelector: ".modal__button",
-  inactiveButtonClass: "modal__button_disabled",
-  inputErrorClass: "modal__input_type_error",
-  errorClass: "modal__error_visible",
-};
-
-// const settings = {
-//  formSelector: ".modal__form",
-//  inputSelector: ".modal__input",
-//  submitButtonSelector: ".modal__button",
-//  inactiveButtonClass: "modal__button_disabled",
-//  inputErrorClass: "modal__input_type_error",
-//  errorClass: "modal__error_visible",
-//};
-
-// Will move to index.js //
-// const editFormValidator = new FormValidator(settings, editForm);
-
-// Will move to index.js //
-// const addFormValidator = new FormValidator(settings, addForm);
