@@ -129,7 +129,6 @@ function handleAddCardFormSubmit(evt) {
   const name = cardTitleInput.value;
   const link = cardUrlInput.value;
   renderCard({ name, link }, cardListEl);
-  addFormValidator.disableButton();
   closeModal(profileAddModal);
 }
 

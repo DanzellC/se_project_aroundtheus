@@ -70,11 +70,7 @@ class FormValidator {
   enableValidation() {
     this._form.addEventListener("submit", (e) => {
       e.preventDefault();
-      this._inputEls.forEach((inputEl) => {
-        inputEl.value = "";
-        this._hideInputError(inputEl);
-      });
-
+      this._form.reset();
       this.disableButton();
     });
 
