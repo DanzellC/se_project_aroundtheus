@@ -1,0 +1,234 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 19px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s 0.6s, opacity 0.6s;
+}
+
+.modal_opened {
+  display: flex;
+
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s, opacity 0.6s;
+}
+
+.modal__heading {
+  text-align: left;
+  margin-bottom: 24px;
+  margin-top: 0px;
+  width: 330px;
+  height: 23px;
+  color: #000;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.modal__container {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 430px;
+  padding: 36px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.modal__form-container {
+  display: block;
+  padding: 30px 0 0 0;
+}
+
+.modal__input-container {
+  position: relative;
+}
+
+.modal__preview-container {
+  position: relative;
+}
+
+.modal__close {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: calc(100% + 5px);
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../images/Mobile-Close-Icon-white.svg);
+}
+
+#modal-close-button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: calc(100% + 4px);
+  bottom: calc(100% + 2px);
+}
+
+.modal__preview-image {
+  max-width: 75vw;
+  max-height: 75vh;
+}
+
+.modal__image-caption {
+  font-family: inter, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 14.52px;
+}
+
+.modal__form {
+  color: #000;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.modal__input {
+  width: 100%;
+  height: 27px;
+  position: relative;
+  display: block;
+  margin-bottom: 0px;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  line-height: 30px;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.modal__input .modal__input_type_error {
+  border-bottom: 1px solid red;
+}
+
+.modal__button {
+  width: 100%;
+  padding: 0;
+  margin-top: 48px;
+  border: none;
+  border-radius: 2px;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 50px;
+  background-color: #000;
+  color: #fff;
+}
+
+.modal__button:hover {
+  background-color: rgba(0, 0, 0);
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.modal__button_disabled:hover {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.modal__button_disabled {
+  border-radius: 2px;
+  opacity: 20%;
+}
+
+.modal__input_type_error {
+  border-bottom: 1px solid red;
+}
+
+.modal__error {
+  max-width: 100%;
+  font-size: 12px;
+  position: absolute;
+  font-weight: 400;
+  line-height: 15px;
+  color: #ff0000;
+  transition: opacity 0.3s;
+}
+
+.modal__error_visible {
+  display: block;
+}
+
+.modal__preview-image {
+  max-width: 75vw;
+  max-height: 75vh;
+}
+
+.modal__image-caption {
+  font-family: inter, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 14.52px;
+}
+
+@media screen and (max-width: 620px) {
+  .modal__container {
+    width: 282px;
+    padding: 25px 22px;
+    margin: 0;
+  }
+
+  .modal__form-container {
+    display: block;
+    padding: 0;
+  }
+
+  .modal__close {
+    width: 26px;
+    height: 26px;
+    padding: 0px;
+    left: calc(100% - 35px);
+    bottom: calc(100% + 13px);
+  }
+
+  .modal__close:hover {
+    opacity: 0.6;
+  }
+
+  .modal__heading {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 46px;
+  }
+
+  .modal__input {
+    margin-top: 30px;
+  }
+
+  .modal__button {
+    margin-top: 46px;
+    font-size: 14px;
+  }
+
+  .modal__preview-image {
+    width: 240px;
+    height: 299px;
+  }
+}
