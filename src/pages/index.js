@@ -1,8 +1,8 @@
 import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
 import "./index.css";
-import popupWithImage from "../components/PopupWithImage.js";
-import popupWithForm from "../components/PopupWithForm.js";
+import PopupWithImage from "../components/PopupWithImage.js";
+import PopupWithForm from "../components/PopupWithForm.js";
 import Section from "../components/Section.js";
 import UserInfo from "../components/UserInfo.js";
 import { initialCards, config } from "../utils/constants.js";
@@ -21,13 +21,13 @@ const profileEditForm = profileEditModal.querySelector(".modal__form");
 
 /*Imported Classes*/
 
-const popupWithEditModal = new popupWithForm(
+const popupWithEditModal = new PopupWithForm(
   "#profile-edit-modal",
   handleProfileEditSubmit,
   console.log(handleProfileEditSubmit)
 );
 
-const popupWithAddModal = new popupWithForm(
+const popupWithAddModal = new PopupWithForm(
   "#profile-add-modal",
   handleAddCardFormSubmit
 );
@@ -43,7 +43,7 @@ addNewCardButton.addEventListener("click", () => {
   popupWithAddModal.open();
 });
 
-const imagePopup = new popupWithImage("#preview-image-modal");
+const imagePopup = new PopupWithImage("#preview-image-modal");
 
 const section = new Section(
   {
